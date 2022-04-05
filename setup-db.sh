@@ -33,6 +33,9 @@ sudo pg_ctlcluster 12 main start
 cd create-data
 bash create-data.sh $warehouse
 
+sudo pg_ctlcluster 12 main start
+sudo service postgresql restart
+
 cd ..
 bash gen-db.sh
 
