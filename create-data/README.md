@@ -35,18 +35,15 @@ Generating orders .. ok !
 
 .. data generation completed successfully :)
 ```
-
 Licence
 -------
 You are free to choose any of the above licences when using the source code.
 However, I encourage you in a non binding way to follow the [blessing from the SQLite folks](https://github.com/sqlite/sqlite/blob/master/LICENSE.md):
-
 ```
 May you do good and not evil.
 May you find forgiveness for yourself and forgive others.
 May you share freely, never taking more than you give.
 ```
-
 Authors
 -------
 Alexander van Renen
@@ -54,3 +51,4 @@ Alexander van Renen
 Original Repo
 -------
 https://github.com/alexandervanrenen/tpcc-generator
+```
