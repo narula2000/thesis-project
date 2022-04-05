@@ -1,7 +1,8 @@
 import csv
 import requests
+import os
 
-ip = "127.0.0.1"
+ip = os.getenv('ip', "127.0.0.1")
 
 def get_req_time(api, transaction):
     url = f'{api}/{transaction}'
