@@ -26,7 +26,9 @@ sudo systemctl enable ssh --now
 
 sudo rm /etc/postgresql/12/main/pg_hba.conf
 sudo cp postgres-config.conf /etc/postgresql/12/main/pg_hba.conf
-sudo echo "listen_addresses = '*'" >> /etc/postgresql/12/main/postgresql.conf
+sudo bash -c "echo \"listen_addresses = '*'\" >> /etc/postgresql/12/main/postgresql.conf"
+
+sudo pg_ctlcluster 12 main start
 
 cd create-data
 bash create-data.sh $warehouse
