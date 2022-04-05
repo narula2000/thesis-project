@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+notebook = "*"
+matplotlib = "*"
+scipy = "*"
+seaborn = "*"
+mpld3 = "*"
+autopep8 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

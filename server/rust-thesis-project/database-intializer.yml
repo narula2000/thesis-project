@@ -1,0 +1,15 @@
+version: "3.10"
+
+services:
+  database:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.init-postgres
+    volumes:
+      - /tmp/postgres-db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    command: >
+        -c work_mem=512MB
+        -c maintenance_work_mem=512MB
+        -c max_wal_size=5GB
