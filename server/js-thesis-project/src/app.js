@@ -13,7 +13,7 @@ const do_stock_level = require('./transactions/stock_level_transaction');
 
 const app = express();
 const sequelize = new Sequelize('postgres', 'postgres', 'postgres', {
-  host: 'localhost',
+  host: '192.168.122.185',
   dialect: 'postgres'
 });
 
