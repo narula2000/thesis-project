@@ -25,22 +25,7 @@ echo 'alias ss="source ~/.bashrc"' >> ~/.bashrc
 echo -e "${BGREEN}----------------> ${BGREEN}Install Reqs"
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential libpq-dev -y
-sudo systemctl enable docker.service --now
 sudo systemctl enable ssh --now
-
-echo -e "${BGREEN}----------------> ${BGREEN}Install Docker Compose"
-# Get latest docker compose released tag
-COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
-
-# Install docker-compose
-sudo sh -c "curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
-sudo chmod +x /usr/local/bin/docker-compose
-
-echo -e "${BGREEN}----------------> ${BGREEN}Mange Docker Permission"
-sudo chown $USER /var/run/docker.sock
-
-sudo groupadd docker
-sudo usermod -aG docker $USER
 
 echo -e "${BGREEN}----------------> ${BGREEN}Install API Reqs"
 cd server
