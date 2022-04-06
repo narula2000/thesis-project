@@ -33,7 +33,7 @@ echo -e "${BGREEN}----------------> ${BGREEN}Config Postgres"
 sudo rm /etc/postgresql/12/main/pg_hba.conf
 sudo cp postgres-config.conf /etc/postgresql/12/main/pg_hba.conf
 sudo bash -c "echo \"listen_addresses = '*'\" >> /etc/postgresql/12/main/postgresql.conf"
-sudo bash -c "echo \"log_statement = 'all'\" >> /etc/postgresql/12/main/postgresql.conf"
+sudo bash -c "echo \"log_statement = 'ddl'\" >> /etc/postgresql/12/main/postgresql.conf"
 sudo bash -c "echo \"max_wal_size = 5GB\" >> /etc/postgresql/12/main/postgresql.conf"
 
 echo -e "${BGREEN}----------------> ${BGREEN}Start Postgres"
